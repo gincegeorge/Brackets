@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Syne&display=swap');
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     font-family: 'Syne', sans-serif;
 }
 .container-fluid{
@@ -28,32 +28,58 @@ body {
     font: 400 20px / 30px "Inter", sans-serif;
 }
 
+nav.navbar.navbar-expand-lg{
+    background-color: #f0f9ff !important;
+}
+
 #intro-detail{
     font-weight: 500;
     color: rgb(44, 44, 44);
 }
 
+#Hero-wrapper {
+    padding: 0 24px;
+    background: #f0f9ff;
+}
 #intro-sec{
-
     margin-top: 120px;
-}.section-fing{
+}
+div#intro-sec .card-sec.row {
+    max-width: 1314px;
+    margin: 0 auto;
+}
+.section-fing{
     padding-top: 80px;
 }
-
-.card :hover{
-    transition: 1s;
-   box-shadow: 10px 10px 10px black;
- }
- .card-body :hover{
+.card-body {
+    transition: .3s;
     box-shadow: none;
-   
+    text-align: center;
+    padding: 20px 25px;
+}
+.card-body:hover {
+    transition: .3s;
+    box-shadow: 0px 0px 18px #a7a7a7;
+    border: none;
 }
 .card-num p{
     margin-top: -5px; 
 }
- .card-num{
-     background-color: #ffeae9;
- color: #361415;
+.card-body > div {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.card-heading{
+    font-weight: 600;
+    font-family: "Inter", sans-serif;
+    padding-top: 14px;
+    color: #361415;
+    font-size: 17px;
+}
+.card-num {
+    background-color: #ffeae9;
+    color: #361415;
     border-radius: 50%;
     font-weight: 700;
     padding: 20px;
@@ -64,17 +90,48 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 80px;
+    margin-left: 0;
+}
+#cards {
+    text-align: center;
 }
 .right .btn{
     border: solid 2px  black;
-    border-radius: 1rem;
 }
 .button .btn:hover{
     transition: 4rem;
   background-color: black;
   color: white;
 }
-@media(max-width:750px){
 
+.download.row.d-flex{
+    justify-content: center;
+}
+.download.row.d-flex .btn-dark {
+    width: auto !important;
+    align-items: center;
+    display: flex;
+}
+.btn{
+    text-decoration: none !important;
+}
+footer a {
+    color: #98d2ff;
+}
+@media only screen and (max-width: 767px) {
+    a.brand.w-nav-brand.w--current {
+        padding: 0 !important;
+    }
+    #Hero-wrapper h1 {
+        font-size: 2.5em !important;
+    }
+    .card-sec.row .col-md-6:first-child {
+        margin-bottom: 20px;
+    }
+    .three-card-sec.row .s-card{
+        margin-bottom: 4%;
+    }
+    .list-unstyled{
+        margin-left: 0 !important;
+    }
 }
